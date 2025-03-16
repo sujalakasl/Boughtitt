@@ -16,6 +16,7 @@ function AppFormField({ name, width, ...otherProps }) {
   return (
     <>
       <TextInput
+        icon={otherProps.icon || null}
         onBlur={() => setFieldTouched(name)}
         onChangeText={(text) => setFieldValue(name, text)}
         value={values[name]}

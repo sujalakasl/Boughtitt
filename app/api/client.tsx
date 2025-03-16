@@ -13,7 +13,7 @@ apiClient.addAsyncRequestTransform(async (request) => {
   request.headers["x-auth-token"] = authToken;
 });
 
-const get = apiClient.get;
+const get: any = apiClient.get;
 apiClient.get = async (url, params, axiosConfig) => {
   const response = await get(url, params, axiosConfig);
 

@@ -17,6 +17,7 @@ function AppFormPicker({
   return (
     <>
       <Picker
+        icon={null} // Provide a default or appropriate icon value
         items={items}
         numberOfColumns={numberOfColumns}
         onSelectItem={(item) => setFieldValue(name, item)}

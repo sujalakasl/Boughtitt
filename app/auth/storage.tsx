@@ -19,7 +19,7 @@ const getToken = async () => {
   }
 };
 
-const getUser = async () => {
+const getUser = async (): Promise<any> => {
   const token = await getToken();
   return token ? jwtDecode(token) : null;
 };

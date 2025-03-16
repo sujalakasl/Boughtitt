@@ -13,7 +13,9 @@ import useNotifications from "../hooks/useNotifications";
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
-  useNotifications();
+  useNotifications((notification) => {
+    console.log("Notification received:", notification);
+  });
 
   return (
     <Tab.Navigator>
